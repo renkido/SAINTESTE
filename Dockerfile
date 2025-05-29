@@ -1,4 +1,4 @@
-FROM node:lts-buster  # Utilisez Node 18 au lieu de LTS (qui est Node 20)
+FROM node:18-buster  
 
 USER root
 RUN apt-get update && \
