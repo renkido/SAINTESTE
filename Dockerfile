@@ -13,6 +13,8 @@ WORKDIR /home/node/SUBZERO-MD
 # Installation sécurisée des dépendances
 RUN yarn config set network-timeout 300000 && \
     yarn install --network-concurrency 1 --ignore-engines
+    yarn remove better-sqlite3 && \
+    yarn add sqlite3@5.1.6
 
 EXPOSE 7860
 ENV NODE_ENV=production
